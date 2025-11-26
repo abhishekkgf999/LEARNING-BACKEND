@@ -26,4 +26,11 @@ app.use(express.static("public"));
 //This middleware makes it easy to read and set cookies in the browser.
 app.use(cookieParser());
 
+//routes import
+import userRouter from './routes/user.routes.js';
+
+//routes declaration
+app.use("/api/v1/users", userRouter);  //Redirect to :- http://localhost:8000/api/v1/users/register
+
+
 export { app };
